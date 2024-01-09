@@ -1,6 +1,6 @@
 # eda_mds
 
-EBasic EDA functions implemented
+Basic EDA functions implemented
 
 ## Installation
 
