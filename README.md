@@ -17,9 +17,13 @@ in [Function Descriptions](#Function Descriptions)
 
 ### Function Descriptions
 
-- function name: function description
-- function name: function description
-- function name: function description
+- cor_eda(): The function cor_eda accepts a dataset and isolates its numerical continuous variables. It calculates the
+  correlation between each numerically continuous variable from scratch and displays the results in a table.
+- info_na(): This function replicates and extends behaviour of pandas.DataFrame.info(). New information will consist of
+  row-level summary statistics for null values to characterize dataframe structure.
+- cat_var_stats(): This function creates summary statistics about categorical variables in the dataframe. Number of
+  unique values, frequency of values and whether some categories should binned will be among the info that will be
+  presented.
 - function name: function description
 
 ### Python Ecosystem Integration
