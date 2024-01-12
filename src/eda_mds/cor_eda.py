@@ -1,4 +1,5 @@
-"""
+def cor_eda(dataset, na_handling='drop'):
+    """
     Perform exploratory data analysis (EDA) by calculating the correlation between numerical variables.
     This function isolates the numerically variables from the given dataset and handles NA values, 
     calculates the correlation between each pair of variables, and displays the results in a table format.
@@ -16,8 +17,8 @@
 
     Example:
     cor_eda(data, na_handling='mean')
-               age    salary
+            age    salary
     age     1.0000   0.9769
     salary  0.9769   1.0000
 
-"""
+    """
