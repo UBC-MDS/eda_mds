@@ -24,7 +24,8 @@ in [Function Descriptions](#Function Descriptions)
 - cat_var_stats(): This function creates summary statistics about categorical variables in the dataframe. Number of
   unique values, frequency of values and whether some categories should binned will be among the info that will be
   presented.
-- function name: function description
+- describe_outliers():  Extends the functionality of pandas.Dataframe.describe() for numeric data by additionally
+  providing a count of lower-tail and upper-tail outliers.
 
 ### Python Ecosystem Integration
 
