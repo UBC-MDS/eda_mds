@@ -2,7 +2,8 @@
 
 ## Our Pledge
 
-In the interest of fostering an open and welcoming environment, we as contributors and maintainers pledge to making participation in our project and our community a harassment-free experience for everyone, regardless of age, body size, disability, ethnicity, gender identity and expression, level of experience, nationality, personal appearance, race, religion, or sexual identity and orientation.
+In the interest of fostering an open and welcoming environment, we as contributors and maintainers pledge to making participation in our project and our community a harassment-free experience for everyone.
+We expect all members to work collaboratively while embracing diversity and being respectful of others. This Code of Conduct outlines how we should behave in the online space of this project.
 
 ## Our Standards
 
@@ -17,10 +18,9 @@ Examples of behavior that contributes to creating a positive environment include
 Examples of unacceptable behavior by participants include:
 
 * The use of sexualized language or imagery and unwelcome sexual attention or advances
-* Trolling, insulting/derogatory comments, and personal or political attacks
 * Public or private harassment
-* Publishing others' private information, such as a physical or electronic address, without explicit permission
 * Other conduct which could reasonably be considered inappropriate in a professional setting
+* Posting personal information without authorization
 
 ## Our Responsibilities
 
@@ -34,10 +34,9 @@ This Code of Conduct applies both within project spaces and in public spaces whe
 
 ## Enforcement
 
-Instances of abusive, harassing, or otherwise unacceptable behavior may be reported by contacting the project team. The project team will review and investigate all complaints, and will respond in a way that it deems appropriate to the circumstances. The project team is obligated to maintain confidentiality with regard to the reporter of an incident. Further details of specific enforcement policies may be posted separately.
-
-Project maintainers who do not follow or enforce the Code of Conduct in good faith may face temporary or permanent repercussions as determined by other members of the project's leadership.
+If a contributor is found to be engaging in inappropriate behaviours, they will receive a written warning informing them of the breach of conduct. All complaints will be reviewed and handled as deemed appropriate, following the consequences of inappropriate behaviours. Any complaints received will remain confidential.
 
 ## Attribution
 
 This Code of Conduct is adapted from the [Contributor Covenant homepage](http://contributor-covenant.org/version/1/4), version 1.4.
+This project uses language from [Egg-Production-Inferential-Test](https://github.com/UBC-MDS/Egg-Production-Inferential-Test/blob/main/CODE_OF_CONDUCT.md)
