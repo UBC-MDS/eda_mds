@@ -42,6 +42,8 @@ Pandas package repo: https://github.com/pandas-dev/pandas
 
 ## Contributing
 
+Package created by Koray Tecimer, Paolo De Lagrave-Codina, Nicole Bidwell, Simon Frew.
+
 Interested in contributing? Check out the contributing guidelines. Please note that this project is released with a Code
 of Conduct. By contributing to this project, you agree to abide by its terms.
 
