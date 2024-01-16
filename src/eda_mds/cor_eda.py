@@ -22,3 +22,9 @@ def cor_eda(dataset, na_handling='drop'):
     salary  0.9769   1.0000
 
     """
+# test
+# 1. no num columns, your df only has 1 num column (give warning)
+# 2. all NA columns (does pandas make NA col a num column)
+# 3. make warning if na_handling input is not correct
+# 4. check values are correct 
+# 5. does not change the original df 

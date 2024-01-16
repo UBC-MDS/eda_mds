@@ -20,3 +20,10 @@ def cat_var_stats(df):
         This function prints the following information and returns None.
 
     """
+# notes: take in outliers of the count
+
+# Defensive
+# 1. No categorical column
+# 2. All unique values 
+# 3. Correctly rejects column
+# 4. Output is correct

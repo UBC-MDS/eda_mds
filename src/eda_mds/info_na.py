@@ -23,3 +23,8 @@ def info_na(df):
         A tidy dataframe.
 
     """
+# tests
+# 1. is it a dataframe? 
+# 2. a seperate check for all na df
+# 3. check print output is correct
+# 4. 

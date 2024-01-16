@@ -36,3 +36,20 @@ def describe_outliers(df, threshold_factor=1.5):
     None. Descriptive information is printed. 
 
     """
+
+    # Defensive 
+    # 1. if no numeric columns return "no numeric columns"
+    # 2. threshold must be non-neg  up to ?? *return a warning if too high
+    # 3. 
+    # 4. 
+    
+    # tests
+    # 1. test the actual values are correct 
+    # 2. throwing input errors (non df & threshold is negative)
+    # 3. test for correct values in function output 
+    #       can we capture print statements with pytest? or optionally output a df? 
+
+
+
+    # notes
+    # std: sqrt(sum(x_i - x_mean)^2/n-1)
