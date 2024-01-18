@@ -29,10 +29,21 @@ def test_no_na():
 
 # Test correct output
 def test_output():
+    with pytest.warns(UserWarning):
+        data, response = generate_data(1)
+        info_na(data)
+    
+    data, response = generate_data(2)
+    info_na(data)
+    
     data, response = generate_data(3)
+    info_na(data)
+
+    data, response = generate_data(4)
     info_na(data)
 # add correct output for the above examples
 # add correct output expectation for randomly generated
+# add method to capture print output
 
 
 # Helper function
@@ -46,6 +57,7 @@ def generate_data(example):
         1 : all-na values
         2 : no na values
         3 : randomly generated data with NAs seeded
+        4 : small pre-generated dataframe with strings
 
     Returns
     -------
@@ -56,7 +68,7 @@ def generate_data(example):
 
     if example == 1:
         data = pd.DataFrame([[np.nan, np.nan], [np.nan, np.nan]])
-        response = None
+        response = None # update to true value
     elif example == 2:
         data = pd.DataFrame([[1, 2], [4, 5]])
         response = None  # update to true value
@@ -72,6 +84,19 @@ def generate_data(example):
             ) == True
         ] = np.nan
         response = None  # update to true value
+    elif example == 4: 
+        data = pd.DataFrame(
+                [
+                    [np.nan, 13, "hello"],
+                    [np.nan, np.nan, "this"], 
+                    [37, 45, "is"], 
+                    [256, 31, ""], 
+                    [1, np.nan, "test"]
+                ]
+            )
+        response = None  # update to true value
+
+
 
     return data, response
 
