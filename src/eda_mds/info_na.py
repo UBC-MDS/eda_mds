@@ -20,7 +20,9 @@ def info_na(df):
     - Rows:
         - Count of rows with any Null Values.
         - Count of rows with all Null values.
-        - Descriptive statistics of proportion of Null Values per row.
+        - Mean Null Count / Row: The mean number of Null Values in rows with Null Values
+        - Mean Null % / Row: The mean percentage of Null Values in rows with Null Values
+
     - Memory Usage
 
     Parameters
@@ -35,8 +37,6 @@ def info_na(df):
 
     if pd.isna(df).all(axis=None):
         warnings.warn("Input `df` contains all NA values")
-
-    print("info_na()")
 
     column_info = pd.DataFrame(
         {
@@ -55,14 +55,10 @@ def info_na(df):
             "Any Null %": (df.isna().any(axis=1).sum() / df.shape[0] * 100).round(2),
             "All Null Count": df.isna().all(axis=1).sum(),
             "All Null %": (df.isna().all(axis=1).sum() / df.shape[0] * 100).round(2),
-            "Mean Null Count / Row": (
-                df.isna().sum(axis=1).drop(df.index[df.isna().sum(axis=1) == 0]).mean()
-            ),
-            "Mean Null % / Row": (
-                df.isna().sum(axis=1).drop(df.index[df.isna().sum(axis=1) == 0]).mean()
-                / (df.isna().sum(axis=1) != 0).sum()
-                * 100
-            ).round(2),
+            "Mean Null Count": df.isna().sum(axis=1).mean().round(2),
+            "Std.Dev Null Count": df.isna().sum(axis=1).std().round(2),
+            "Max Null Count": df.isna().sum(axis=1).max(),
+            "Min Null Count": df.isna().sum(axis=1).min()
         }
     )
 
