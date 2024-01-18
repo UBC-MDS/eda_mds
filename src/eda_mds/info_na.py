@@ -1,3 +1,6 @@
+import numpy as np
+import pandas as pd
+
 def info_na(df):
     """
     This function replicates and extends behaviour of pandas.DataFrame.info().
@@ -23,8 +26,12 @@ def info_na(df):
         A tidy dataframe.
 
     """
-# tests
-# 1. is it a dataframe? 
-# 2. a seperate check for all na df
-# 3. check print output is correct
-# 4. 
+
+    if not isinstance(df, pd.DataFrame):
+        raise TypeError("Input `df` must be a Pandas DataFrame")
+    
+    if pd.isna(df).all(axis=None): 
+        raise Warning("Input `df` contains all NA values")
+
+    
+    print("info_na()")
