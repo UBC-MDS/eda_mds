@@ -18,11 +18,15 @@ def info_na(df):
         - Null Percentage
         - Dtype
     - Rows:
-        - Count of rows with any Null Values.
-        - Count of rows with all Null values.
-        - Mean Null Count / Row: The mean number of Null Values in rows with Null Values
-        - Mean Null % / Row: The mean percentage of Null Values in rows with Null Values
-
+        - Total Rows: 
+        - Any Null Count: Count of rows with any Null Values.
+        - Any Null Percent: Percentage of rows with any Null Values. 
+        - All Null Count: Count of rows with all Null Values.
+        - All Null Percent: Percentage of rows with all Null Values. 
+        - Mean Null Count: Average number of Null Values per row.
+        - Std.Dev Null Count: Standard devation of the number of Null Values per row. 
+        - Max Null Count: The maximum number of Null Values found in a row.
+        - Min Null Count: The minimum number of Null Values found in a row. 
     - Memory Usage
 
     Parameters
@@ -64,3 +68,9 @@ def info_na(df):
 
     print(column_info)
     print(row_info)
+
+# Tasks: 
+# - Dataframe class
+# - Dataframe shape
+# - Dataframe memory usage 
+# - Formatting for printing
