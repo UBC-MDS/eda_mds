@@ -1,3 +1,8 @@
+import pandas as pd
+import pytest
+import sys
+import os
+
 def describe_outliers(df, threshold_factor=1.5):
     """
     Extends the functionality of pandas.Dataframe.describe() for numeric data by 
@@ -36,6 +41,11 @@ def describe_outliers(df, threshold_factor=1.5):
     None. Descriptive information is printed. 
 
     """
+
+
+
+
+
 
     # Defensive 
     # 1. if no numeric columns return "no numeric columns"
