@@ -1,7 +1,11 @@
-def cor_eda(dataset, na_handling='drop'):
+import pandas as pd
+import numpy as np
+
+
+def cor_eda(dataset, na_handling="drop"):
     """
     Perform exploratory data analysis (EDA) by calculating the correlation between numerical variables.
-    This function isolates the numerically variables from the given dataset and handles NA values, 
+    This function isolates the numerically variables from the given dataset and handles NA values,
     calculates the correlation between each pair of variables, and displays the results in a table format.
 
     Parameters:
@@ -22,9 +26,34 @@ def cor_eda(dataset, na_handling='drop'):
     salary  0.9769   1.0000
 
     """
+    # Isolate the numerical variables
+    numerical_data = dataset.select_dtypes(include=["number"])
+
+    if numerical_data.empty or numerical_data.shape[1] == 0:
+        return "There are no numerical columns"
+
+    # Handle missing values according to the specified method
+    if na_handling == "drop":
+        numerical_data = numerical_data.dropna()
+    elif na_handling == "mean":
+        numerical_data = numerical_data.fillna(numerical_data.mean())
+    elif na_handling == "median":
+        numerical_data = numerical_data.fillna(numerical_data.median())
+    elif na_handling == "value":
+        # Replace with a chosen value, for demonstration we use 0
+        numerical_data = numerical_data.fillna(0)
+    else:
+        raise ValueError("na_handling must be 'drop', 'mean', 'median', or 'value'")
+
+    # Use pandas built-in corr() method to get the correlation matrix
+    correlation_matrix = numerical_data.corr()
+
+    return correlation_matrix.astype(float)
+
+
 # test
 # 1. no num columns, your df only has 1 num column (give warning)
 # 2. all NA columns (does pandas make NA col a num column)
 # 3. make warning if na_handling input is not correct
-# 4. check values are correct 
-# 5. does not change the original df 
+# 4. check values are correct
+# 5. does not change the original df
