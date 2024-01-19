@@ -5,6 +5,7 @@ import pandas as pd
 
 from eda_mds import info_na
 
+
 # Test for correct input types
 def test_input_type():
     with pytest.raises(TypeError):
@@ -46,11 +47,6 @@ def test_output(capsys):
     info_na(data)
     output = capsys.readouterr()
     assert output.out == response
-
-
-# add correct output for the above examples
-# add correct output expectation for randomly generated
-# add method to capture print output
 
 
 # Helper function
@@ -97,6 +93,7 @@ max null count          2.0
 min null count          2.0
 
 """
+
     elif example == 2:
         data = pd.DataFrame([[1, 2], [4, 5]])
         response = """
@@ -174,9 +171,9 @@ min null count           0.00
                 [37, 45, "is"],
                 [256, 31, ""],
                 [1, np.nan, "test"],
-            ], 
-            index = ["First", "Second", "Third", "Fourth", "Fifth"],
-            columns = ["Column1", "ColumnNumber2", "Column3"]
+            ],
+            index=["First", "Second", "Third", "Fourth", "Fifth"],
+            columns=["Column1", "ColumnNumber2", "Column3"],
         )
         response = """
 type: <class 'pandas.core.frame.DataFrame'>
