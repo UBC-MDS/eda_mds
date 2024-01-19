@@ -95,12 +95,10 @@ def generate_data(example):
                 [37, 45, "is"],
                 [256, 31, ""],
                 [1, np.nan, "test"],
-            ]
+            ], 
+            index = ["First", "Second", "Third", "Fourth", "Fifth"],
+            columns = ["Column1", "ColumnNumber2", "Column3"]
         )
         response = None  # update to true value
 
     return data, response
-
-
-# tests
-# 4. check print output is correct
