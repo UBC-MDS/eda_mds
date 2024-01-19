@@ -19,15 +19,15 @@ def info_na(df):
         - Null Percentage
         - Dtype
     - Rows:
-        - Total Rows: 
+        - Total Rows:
         - Any Null Count: Count of rows with any Null Values.
-        - Any Null Percent: Percentage of rows with any Null Values. 
+        - Any Null Percent: Percentage of rows with any Null Values.
         - All Null Count: Count of rows with all Null Values.
-        - All Null Percent: Percentage of rows with all Null Values. 
+        - All Null Percent: Percentage of rows with all Null Values.
         - Mean Null Count: Average number of Null Values per row.
-        - Std.Dev Null Count: Standard devation of the number of Null Values per row. 
+        - Std.Dev Null Count: Standard devation of the number of Null Values per row.
         - Max Null Count: The maximum number of Null Values found in a row.
-        - Min Null Count: The minimum number of Null Values found in a row. 
+        - Min Null Count: The minimum number of Null Values found in a row.
 
     Parameters
     ----------
@@ -36,12 +36,14 @@ def info_na(df):
 
     """
 
+    # Input checks and warnings
     if not isinstance(df, pd.DataFrame):
         raise TypeError("Input `df` must be a Pandas DataFrame")
 
     if pd.isna(df).all(axis=None):
         warnings.warn("Input `df` contains all NA values")
 
+    # Collect information about df
     type_info = type(df)
 
     shape_info = df.shape
@@ -66,25 +68,20 @@ def info_na(df):
             "mean null count": df.isna().sum(axis=1).mean().round(2),
             "std.dev null count": df.isna().sum(axis=1).std().round(2),
             "max null count": df.isna().sum(axis=1).max(),
-            "min null count": df.isna().sum(axis=1).min()
+            "min null count": df.isna().sum(axis=1).min(),
         }
     )
 
+    # Human-readable memory usage formatting
     suffix = ["B", "KB", "MB", "GB", "TB"]
-    memory_bytes = df.memory_usage(deep=True).sum()  
+    memory_bytes = df.memory_usage(deep=True).sum()
     n = 0
-    while memory_bytes > 2 ** 10: 
-        memory_bytes = memory_bytes / 2 ** 10 
+    while memory_bytes > 2**10:
+        memory_bytes = memory_bytes / 2**10
         n += 1
     memory_info = f"{np.round(memory_bytes, 1)} {suffix[n]}"
 
-    # print(type_info)
-    # print(shape_info)
-    # print(column_info)
-    # print(row_info)
-    # print(memory_info)
-
-
+    # Format to output string
     output = f"""
 type: {type_info}
 shape: {shape_info}
@@ -96,11 +93,5 @@ columns:
 rows:
 {row_info.to_string()}
 """
-    
-    print(output)
 
-# Tasks: 
-# - Dataframe class
-# - Dataframe shape
-# - Dataframe memory usage 
-# - Formatting for printing
+    print(output)
