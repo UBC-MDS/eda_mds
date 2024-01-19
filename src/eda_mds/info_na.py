@@ -9,7 +9,7 @@ def info_na(df):
     New information will consist of row-level summary statistics for null values to characterize dataframe structure.
 
     This function prints the following information about a DataFrame:
-    - DataFrame Class
+    - DataFrame Type
     - Shape:
     - Columns:
         - Index
@@ -42,6 +42,10 @@ def info_na(df):
     if pd.isna(df).all(axis=None):
         warnings.warn("Input `df` contains all NA values")
 
+    type_info = type(df)
+
+    shape_info = df.shape
+
     column_info = pd.DataFrame(
         {
             "#": np.arange(df.shape[1]),
@@ -66,8 +70,19 @@ def info_na(df):
         }
     )
 
+    suffix = ["B", "KB", "MB", "GB", "TB"]
+    memory_bytes = df.memory_usage(deep=True).sum()  
+    n = 0
+    while memory_bytes > 2 ** 10: 
+        memory_bytes = memory_bytes / 2 ** 10 
+        n += 1
+    memory_info = f"{np.round(memory_bytes, 1)} {suffix[n]}"
+
+    print(type_info)
+    print(shape_info)
     print(column_info)
     print(row_info)
+    print(memory_info)
 
 # Tasks: 
 # - Dataframe class
