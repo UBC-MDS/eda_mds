@@ -1,12 +1,11 @@
 # eda_mds
 
-Basic EDA functions implemented
+Basic EDA functions implemented to improve on core Pandas DataFrame functions 
 
 ## Installation
 
-```bash
-$ pip install eda_mds
-```
+This project has not yet been uploaded to PyPI. 
+Please see [CONTRIBUTING.md] for instructions to install locally. 
 
 ## Summary
 
