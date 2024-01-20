@@ -26,6 +26,9 @@ assert np.allclose(
 
 
 def test_correlation_matrix():
+    """
+    Verify that the computed correlation matrix matches the expected values.
+    """
     dfA = pd.DataFrame(
         data={
             "age": [25, 30, 35, 40, 45, 55, 60, 65, 70, 70],
@@ -49,6 +52,9 @@ def test_correlation_matrix():
 
 
 def test_na_val():
+    """
+    Verify that df with NA's give expected values.
+    """
     dfA = pd.DataFrame(
         data={
             "age": [25, None, 35, 40, 45, 55, 60, None, 70, 70],
@@ -87,6 +93,9 @@ def test_na_val():
 
 
 def test_na_val_all():
+    """
+    Verify that df with all NA's give expected values.
+    """
     dfA = pd.DataFrame(
         data={
             "age": [None, None, None],
@@ -104,6 +113,9 @@ def test_na_val_all():
 
 
 def test_no_numerical_columns():
+    """
+    Verify that df has no numeric column it results in expected message.
+    """
     df = pd.DataFrame({"category": ["A", "B", "C"], "boolean": [True, False, True]})
 
     result = cor_eda(df)
@@ -113,6 +125,9 @@ def test_no_numerical_columns():
 
 
 def test_na_handling_input():
+    """
+    Verify that df with na_handling with wrong input gives expected output.
+    """
     df = pd.DataFrame({"category": [1, 2, 3], "boolean": [3, 3, 3]})
     try:
         cor_eda(df, na_handling="incorrect_value")
@@ -124,6 +139,9 @@ def test_na_handling_input():
 
 
 def test_df_notChanged():
+    """
+    Verify that df did not change after function is run.
+    """
     df = pd.DataFrame({"category": [1, None, 3], "boolean": [3, 3, 3]})
     x = df.shape
     cor_eda(df, na_handling="mean")
@@ -134,6 +152,9 @@ def test_df_notChanged():
 
 
 def test_na_handling_mean():
+    """
+    Verify that df with na_handling with mean input gives expected output.
+    """
     dfA = pd.DataFrame(
         data={
             "age": [25, None, 35, 40, 45, 55, 60, None, 70, 70],
