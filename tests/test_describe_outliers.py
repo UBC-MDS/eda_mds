@@ -4,6 +4,7 @@ import pytest
 
 from eda_mds.describe_outliers import describe_outliers
 
+# testing data
 df = pd.DataFrame({
     'A': [-3, 0, 1, 2, 3, 10, 3],
     'B': [4, np.nan , 6, -10, 1, 1, 3],
@@ -17,6 +18,7 @@ df_no_numeric = pd.DataFrame({
 })
 
 def test_threshold_value():
+    """Tests that a ValueError is given when the threshold input is non-negative."""
     with pytest.raises(ValueError):
         describe_outliers(df, threshold=-2)    
     
@@ -24,17 +26,21 @@ def test_threshold_value():
         describe_outliers(df, threshold=-3.5)
     
 def test_df_numeric():
+    """Tests that a ValueError is given when the dataframe doesn't contain any 
+    numeric columns."""
     with pytest.raises(ValueError):
         describe_outliers(df_no_numeric)
 
 def test_df_type():
+    """Tests that a TypeError is given when the input for df is not a dataframe"""
     with pytest.raises(TypeError):
         describe_outliers(np.array([1, 2, 3]))
     
     with pytest.raises(TypeError):
         describe_outliers(df = 4, threshold=3)
 
-def test_output_values():    
+def test_output_values():
+    """Tests that the calculated output values are correct."""
     assert describe_outliers(df).iloc[1].iloc[1] == 6
     assert describe_outliers(df).iloc[2].iloc[1] == 0.8333333333333334
     assert describe_outliers(df).iloc[3].iloc[1] == 5.636192568273964
