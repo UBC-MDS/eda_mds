@@ -1,4 +1,4 @@
-from eda_mds.cor_eda import cor_eda  # find the correct thing
+from eda_mds.cor_eda import cor_eda
 import pandas as pd
 import numpy as np
 
@@ -115,7 +115,7 @@ def test_no_numerical_columns():
 def test_na_handling_input():
     df = pd.DataFrame({"category": [1, 2, 3], "boolean": [3, 3, 3]})
     try:
-        cor_eda(df, na_handling="incorrect_value")  # Use a value that is not expected
+        cor_eda(df, na_handling="incorrect_value")
         assert False, "The function should have raised a ValueError"
     except ValueError as e:
         assert (

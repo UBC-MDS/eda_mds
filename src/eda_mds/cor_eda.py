@@ -49,11 +49,3 @@ def cor_eda(dataset, na_handling="drop"):
     correlation_matrix = numerical_data.corr()
 
     return correlation_matrix.astype(float)
-
-
-# test
-# 1. no num columns, your df only has 1 num column (give warning)
-# 2. all NA columns (does pandas make NA col a num column)
-# 3. make warning if na_handling input is not correct
-# 4. check values are correct
-# 5. does not change the original df
