@@ -45,10 +45,14 @@ If you are proposing a feature:
 Here's how to set up `eda_mds` for local development.
 
 1. Download a copy of `eda_mds` locally.
-2. Create a new `conda` environment and install poetry
+2. Create/activate new `conda` environment and install poetry
 
     ```console
     $ conda create -n eda_mds_dev python=3.9 poetry
+    ```
+
+    ```console
+    $ conda activate eda_mds_dev 
     ```
 
 3. Install `eda_mds` using `poetry`:
