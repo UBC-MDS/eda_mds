@@ -1,4 +1,8 @@
-def cat_var_stats(df):
+import pandas as pd
+import numpy as np
+
+
+def cat_var_stats(df, binning_threshold=2):
     """
     This function creates summary statistics about categorical variables in the dataframe. Number of unique values,
     frequency of values and whether some categories should binned will be among the info that will be presented.
@@ -13,17 +17,41 @@ def cat_var_stats(df):
     ----------
     df : pandas.DataFrame
         A pandas dataframe.
+    binning_threshold : int, optional
+        A threshold for binning values. If a value has lower percentage frequency than the threshold it will be advised
+        to bin them. The default is 2.
 
     Returns
     -------
     None :
         This function prints the following information and returns None.
-
     """
-# notes: take in outliers of the count
 
-# Defensive
-# 1. No categorical column
-# 2. All unique values 
-# 3. Correctly rejects column
-# 4. Output is correct
+    if type(df) != pd.DataFrame:
+        raise TypeError("The input should be a pandas dataframe")
+    if type(binning_threshold) != int and type(binning_threshold) != float:
+        raise TypeError("The threshold value should be numeric")
+    if binning_threshold < 0 or binning_threshold > 100:
+        raise ValueError("The threshold value should be between 0 and 100")
+    if df.empty:
+        raise ValueError("The input dataframe should not be empty")
+
+    for col in df.select_dtypes(include=['object', 'bool']).columns:  # iterate over categorical columns
+        value_counts = dict()
+        for val in df[col].unique():
+            value_counts[val] = (val == df[col]).sum() / len(df) * 100  # calculate frequency of values and save in dict
+        if df[col].nunique() == len(df) or (np.array(list(value_counts.values())) < 1).sum() == df[col].nunique():
+            continue  # if all values are unique or all values have frequency less than 1%, continue to next column
+        print(f"Column: {col}")
+        print(f"Number of unique values: {df[col].nunique()}")
+        print("Frequency of values:")
+        for val in df[col].unique():
+            print(f"{val}: {value_counts[val]:.2f}%")
+        if (np.array(list(value_counts.values())) < binning_threshold).sum() > 1:
+            print("Binning recommendations:")
+            low_freq_values = [k for k, v in value_counts.items() if v < binning_threshold]
+
+            print(', '.join(low_freq_values), 'values can be binned into "other" category as they are lower than'
+                                              ' binning threshold')
+        print("------------------------------------")
+        print("\n")
