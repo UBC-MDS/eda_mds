@@ -1,7 +1,4 @@
 import pandas as pd
-import pytest
-import sys
-import os
 
 def describe_outliers(df, threshold=1.5):
     """

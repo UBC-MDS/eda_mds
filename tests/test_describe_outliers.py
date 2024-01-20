@@ -1,10 +1,7 @@
 import pandas as pd
 import numpy as np
 import pytest
-import sys
-import os
 
-#sys.path.append('..')
 from eda_mds.describe_outliers import describe_outliers
 
 df = pd.DataFrame({
