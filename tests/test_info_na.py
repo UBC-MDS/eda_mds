@@ -6,27 +6,30 @@ import pandas as pd
 from eda_mds import info_na
 
 
-# Test for correct input types
 def test_input_type():
+    """Tests that info_na raises a TypeError when the input is not a pandas.DataFrame."""
     with pytest.raises(TypeError):
         info_na(12)
 
 
-# Test to handle all-na values
 def test_all_na():
+    """Test that info_na raises a UserWarning when the input dataframe has all null values."""
     with pytest.warns(UserWarning):
         data, _ = generate_data(1)
         info_na(data)
 
 
-# Test to handle no na values
 def test_no_na():
+    """Test that no error is thrown when an input dataframe has no null values."""
     data, _ = generate_data(2)
     info_na(data)
 
 
-# Test correct output
 def test_output(capsys):
+    """
+    Test that output printed by the function, its calculations, are correct.
+    Note that the `capsys` is a `pytest` handler to capture console output.
+    """
     with pytest.warns(UserWarning):
         data, response = generate_data(1)
         info_na(data)
@@ -65,8 +68,7 @@ def generate_data(example):
     Returns
     -------
     tuple
-        tuple of desired data to provide and expected response, if applicable.
-
+        tuple of desired data to provide (pandas.DataFrame) and expected response (string), if applicable.
     """
 
     if example == 1:
