@@ -42,6 +42,26 @@ def describe_outliers(df, threshold=1.5, numeric=True):
     summary_df : pandas.DataFrame
         A dataframe of the descriptive summary statistics. 
     
+    Example
+    --------
+    >>>  import pandas as pd
+    >>>  data = {'numeric': [1, 2, 3, 4, 5, 100], 
+    >>>         'categorical': ['a', 'b', 'c', 'd', 'e', 'f']}
+    >>>  df = pd.DataFrame(data)
+    >>>  describe_outliers(df, threshold = 2, numeric=False)
+    # Output 
+                        categorical	    numeric
+        dtype	            object	    int64
+        Non-null count	    6	        6
+        mean	            NaN	        19.166667
+        standard deviation	NaN	        39.625329
+        min value	        NaN	        1.0
+        25% percentile	    NaN	        2.25
+        50% (median)	    NaN	        3.5
+        75% percentile	    NaN	        4.75
+        max value	        NaN	        100.0
+        lower-tail outliers	NaN	        0.0
+        upper-tail outliers	NaN	        1.0
     """
     
     if not isinstance(df, pd.DataFrame):
