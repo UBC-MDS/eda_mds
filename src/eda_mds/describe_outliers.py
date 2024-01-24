@@ -1,6 +1,6 @@
 import pandas as pd
 
-def describe_outliers(df, threshold=1.5):
+def describe_outliers(df, threshold=1.5, numeric=True):
     """
     Extends the functionality of pandas.Dataframe.describe() for numeric data by 
     additionally providing a count of lower-tail and upper-tail outliers. 
@@ -8,6 +8,7 @@ def describe_outliers(df, threshold=1.5):
     If the data contains numerical values the printed description includes the following
     information:
     
+    - dtype: the datatype of the the column. 
     - count: The number of non-null observations.
     - mean: The mean value.
     - std: The standard deviation.
@@ -31,6 +32,10 @@ def describe_outliers(df, threshold=1.5):
     threshold : float, optional
         The scalar used in outlier detection. It must be a non-negative numeric value. A higher value reduces 
         the sensitivity of outlier detection.
+    
+    numeric : boolean, optional
+        If set to True, the returned dataframe will only include description on numeric columns. If False, 
+        the dataframe will additionally include the dtype and count for non-numeric columns. Default is True.  
 
     Returns
     -------
@@ -48,12 +53,15 @@ def describe_outliers(df, threshold=1.5):
     column_names = df.columns
     numeric_columns = df.select_dtypes(include='number').columns.tolist()
 
+    # consider only numeric columns (unless specified)
+    if numeric == True:
+        column_names = numeric_columns
+
     if len(numeric_columns) == 0:
         raise ValueError("Your dataframe contains no numeric columns. It should include at least 1.")
     
     # calculate summary statistics
-    counts = df.count().astype(int)
-
+    counts = df[column_names].count().astype(int)
     mean = df[numeric_columns].mean()
     sd = df[numeric_columns].std()
     min = pd.Series(df[numeric_columns].min(), index=numeric_columns)
