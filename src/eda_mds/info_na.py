@@ -5,19 +5,21 @@ import warnings
 
 def info_na(df):
     """
-    This function replicates and extends behaviour of pandas.DataFrame.info().
+    This function replicates and extends behaviour of pandas.DataFrame.info(), 
+    which provides type, shape, memory useage, and column information.
     New information will consist of row-level summary statistics for null values to characterize dataframe structure.
 
     This function prints the following information about a DataFrame:
-    - DataFrame Type
-    - Shape:
-    - Memory Usage
+    (starred information exists in pandas.DataFrame.info())
+    - DataFrame Type *
+    - Shape *
+    - Memory Usage *
     - Columns:
-        - Index
-        - Name
+        - Index *
+        - Name *
         - Null Count
         - Null Percentage
-        - Dtype
+        - Dtype *
     - Rows:
         - Total Rows:
         - Any Null Count: Count of rows with any Null Values.
@@ -34,6 +36,44 @@ def info_na(df):
     df : pandas.DataFrame
         A tidy dataframe.
 
+    Returns
+    -------
+    None
+        Descriptive information about the dataframe will be printed to the console. 
+
+    Examples
+    --------
+    >>> info_na(pd.DataFrame(
+            [
+                [np.nan, 13, "hello"],
+                [np.nan, np.nan, "this"],
+                [37, 45, "is"],
+                [256, 31, ""],
+                [1, np.nan, "test"],
+            ],
+            index=["First", "Second", "Third", "Fourth", "Fifth"],
+            columns=["Column1", "ColumnNumber2", "Column3"],
+        ))
+    type: <class 'pandas.core.frame.DataFrame'>
+    shape: (5, 3)
+    memory usage: 692 B
+    --------
+    columns:
+    #        column  null count  null %   dtype
+    0       Column1           2    40.0 float64
+    1 ColumnNumber2           2    40.0 float64
+    2       Column3           0     0.0  object
+    -----
+    rows:
+    total rows             5.00
+    any null count         3.00
+    any null %            60.00
+    all null count         0.00
+    all null %             0.00
+    mean null count        0.80
+    std.dev null count     0.84
+    max null count         2.00
+    min null count         0.00
     """
 
     # Input checks and warnings
