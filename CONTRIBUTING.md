@@ -40,7 +40,7 @@ If you are proposing a feature:
 * Keep the scope narrow, so its easier to implement.
 * Remember that this is a volunteer-driven project, and that contributions  are welcome :)
 
-### Get Started!
+## Get Started!
 
 Here's how to set up `eda_mds` for local development.
 
