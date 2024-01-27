@@ -8,7 +8,7 @@ Basic EDA functions implemented to improve on core Pandas DataFrame functions.
 ## Installation
 
 This project has not yet been uploaded to PyPI. 
-Please see [contributing](/CONTRIBUTING.md) for instructions to install locally. 
+Please see [contributing](contributing.md) for instructions to install locally. 
 
 ## Summary
 
