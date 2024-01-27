@@ -25,6 +25,24 @@ def cat_var_stats(df, binning_threshold=2):
     -------
     None :
         This function prints the following information and returns None.
+    Example
+    -------
+    >>> import pandas as pd
+    >>> df = pd.read_csv('https://raw.githubusercontent.com/mwaskom/seaborn-data/master/titanic.csv')
+    >>> cat_var_stats(df)
+    Column: sex
+    Number of unique values: 2
+    Frequency of values:
+    male: 64.76%
+    female: 35.24%
+    ------------------------------------
+    [...]
+    Column: alone
+    Number of unique values: 2
+    Frequency of values:
+    False: 39.73%
+    True: 60.27%
+    ------------------------------------
     """
 
     if type(df) != pd.DataFrame:
