@@ -7,7 +7,7 @@
 
 example.ipynb
 changelog.md
-contributing.md
+CONTRIBUTING.md
 conduct.md
 autoapi/index
 ```
