@@ -39,6 +39,11 @@ def test_df_type():
     with pytest.raises(TypeError):
         describe_outliers(df = 4, threshold=3)
 
+def test_numeric_categorical():
+    """Tests that both numerical and categorical description is returned when specified"""
+    output_df = describe_outliers(df, numeric=False)
+    assert output_df.columns.tolist() == ['A', 'B', 'C', 'D']
+
 def test_output_values():
     """Tests that the calculated output values are correct."""
     assert describe_outliers(df).iloc[1].iloc[1] == 6
