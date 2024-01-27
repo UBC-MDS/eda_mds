@@ -8,34 +8,34 @@ def describe_outliers(df, threshold=1.5, numeric=True):
     If the data contains numerical values the printed description includes the following
     information:
     
-    - dtype: the datatype of the the column. 
-    - count: The number of non-null observations.
+    - dtype: the datatype of the column. 
+    - Non-null count: The number of non-null observations.
     - mean: The mean value.
-    - std: The standard deviation.
+    - standard deviation: The standard deviation.
     - min: the minimum value.
-    - 25%: The 25% percentile (Q1).
-    - 50%: The 50% percentile (Q2).
-    - 75%: The 75% percentile (Q3).
+    - 25% percentile: The 25% percentile (Q1).
+    - 50% (median): The 50% percentile (Q2).
+    - 75% percentile: The 75% percentile (Q3).
     - max: the maximum value.
     - lower-tail outliers: count of values significantly smaller than the majority of data.
     - upper-tail outliers: count of values significantly larger than the majority of data.
 
-    Outliers are calculated using Interquartile Range (IQR) method for outlier detection.
-    Lower-tail outliers are observations less than Q1 - threshold*IQR 
-    Upper-tail outliers are observations greater than Q3 + threshold*IQR 
+    The number of outliers is calculated using the Interquartile Range (IQR) 
+    method for outlier detection. Lower-tail outliers are observations less than:
+    Q1 - threshold*IQR. Upper-tail outliers are observations greater than: Q3 + threshold*IQR. 
 
     Parameters
     ----------
     df : pandas.DataFrame
-        A tidy dataframe, containing at least 1 numeric column. 
+        A tidy dataframe containing at least 1 numeric column. 
     
     threshold : float, optional
-        The scalar used in outlier detection. It must be a non-negative numeric value. A higher value reduces 
-        the sensitivity of outlier detection.
+        The scalar used in outlier detection. It must be a non-negative numeric value. A higher 
+        value reduces the sensitivity of outlier detection. Default is 1.5 
     
     numeric : boolean, optional
-        If set to True, the returned dataframe will only include description on numeric columns. If False, 
-        the dataframe will additionally include the dtype and count for non-numeric columns. Default is True.  
+        If set to True, the returned dataframe will only include description on numeric columns. 
+        If False, the output will include the dtype and count for non-numeric columns. Default is True.  
 
     Returns
     -------
