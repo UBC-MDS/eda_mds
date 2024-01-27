@@ -1,3 +1,5 @@
+[![Documentation Status](https://readthedocs.org/projects/eda-mds/badge/?version=latest)](https://eda-mds.readthedocs.io/en/latest/?badge=latest)
+
 # eda_mds
 
 Basic EDA functions implemented to improve on core Pandas DataFrame functions 
