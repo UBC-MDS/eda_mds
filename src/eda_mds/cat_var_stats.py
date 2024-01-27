@@ -39,7 +39,10 @@ def cat_var_stats(df, binning_threshold=2):
     for col in df.select_dtypes(include=['object', 'bool']).columns:  # iterate over categorical columns
         value_counts = dict()
         for val in df[col].unique():
-            value_counts[val] = (val == df[col]).sum() / len(df) * 100  # calculate frequency of values and save in dict
+            if pd.isna(val):
+                value_counts[val] = (df[col].isna()).sum() / len(df) * 100
+            else:
+                value_counts[val] = (val == df[col]).sum() / len(df) * 100  # calculate frequency of values and save in dict
         if df[col].nunique() == len(df) or (np.array(list(value_counts.values())) < 1).sum() == df[col].nunique():
             continue  # if all values are unique or all values have frequency less than 1%, continue to next column
         print(f"Column: {col}")
@@ -49,7 +52,7 @@ def cat_var_stats(df, binning_threshold=2):
             print(f"{val}: {value_counts[val]:.2f}%")
         if (np.array(list(value_counts.values())) < binning_threshold).sum() > 1:
             print("Binning recommendations:")
-            low_freq_values = [k for k, v in value_counts.items() if v < binning_threshold]
+            low_freq_values = [str(k) for k, v in value_counts.items() if v < binning_threshold]
 
             print(', '.join(low_freq_values), 'values can be binned into "other" category as they are lower than'
                                               ' binning threshold')
