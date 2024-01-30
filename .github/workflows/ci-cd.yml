@@ -1,3 +1,6 @@
+# This CI/CD workflow is based on the example provided by Tiffany Timbers in the 
+# from the pycounts_tt_2024 repository, accessed on 2024-01-30. 
+# It can be found at: https://github.com/ttimbers/pycounts_tt_2024/blob/main/.github/workflows/ci-cd.yml"
 name: ci-cd
 
 on: [push, pull_request]
