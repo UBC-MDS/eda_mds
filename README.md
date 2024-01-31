@@ -1,5 +1,5 @@
 # eda_mds: Simplified Exploratory Data Analysis
-
+ 
 [![Documentation Status](https://readthedocs.org/projects/eda-mds/badge/?version=latest)](https://eda-mds.readthedocs.io/en/latest/?badge=latest)
 ---
 
