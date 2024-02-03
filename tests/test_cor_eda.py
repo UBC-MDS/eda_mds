@@ -203,6 +203,7 @@ def test_na_handling_mean():
         cor_eda(dfB), cor_eda(dfA, na_handling="mean"), atol=1e-8
     ), "The function does not correctly impute the mean for NA values"
 
+
 # testing function handles na_handling median correctly
 def test_na_handling_median():
     """

@@ -40,9 +40,13 @@ def cat_var_stats(df, binning_threshold=2):
 
     if type(df) != pd.DataFrame:  # Checks if input is a pandas dataframe
         raise TypeError("The input should be a pandas dataframe")
-    if type(binning_threshold) != int and type(binning_threshold) != float:  # Checks if threshold is numeric
+    if (
+        type(binning_threshold) != int and type(binning_threshold) != float
+    ):  # Checks if threshold is numeric
         raise TypeError("The threshold value should be numeric")
-    if binning_threshold < 0 or binning_threshold > 100:  # Checks if threshold is between 0 and 100
+    if (
+        binning_threshold < 0 or binning_threshold > 100
+    ):  # Checks if threshold is between 0 and 100
         raise ValueError("The threshold value should be between 0 and 100")
     if df.empty:  # Checks if dataframe is empty
         raise ValueError("The input dataframe should not be empty")
@@ -53,7 +57,9 @@ def cat_var_stats(df, binning_threshold=2):
         value_counts = dict()
         for val in df[col].unique():
             if pd.isna(val):
-                value_counts[val] = (df[col].isna()).sum() / len(df) * 100  # for na values calculate the frequency
+                value_counts[val] = (
+                    (df[col].isna()).sum() / len(df) * 100
+                )  # for na values calculate the frequency
             else:
                 value_counts[val] = (
                     (val == df[col]).sum() / len(df) * 100
