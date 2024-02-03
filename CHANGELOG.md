@@ -2,6 +2,13 @@
 
 
 
+## v2.1.1 (2024-02-03)
+
+### Fix
+
+* fix: Feedback addressed by korayt (Koray Tecimer) ([`65dec65`](https://github.com/UBC-MDS/eda_mds/commit/65dec65b2362829497240bc16a35d56c30550bfa))
+
+
 ## v2.1.0 (2024-01-31)
 
 ### Feature
