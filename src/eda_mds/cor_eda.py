@@ -4,24 +4,34 @@ import numpy as np
 
 def cor_eda(dataset, na_handling="drop"):
     """
-    Perform exploratory data analysis (EDA) by calculating the correlation between numerical variables.
-    This function isolates the numerically variables from the given dataset and handles NA values,
-    calculates the correlation between each pair of variables, and displays the results in a table format.
+    Calculate the correlation between numerical variables in a DataFrame.
 
-    Parameters:
-    dataset (DataFrame): The DataFrame should include various types of variables
-    na_handling (str, optional): Specifies the method to handle missing values (NAs). Options are 'drop', 'mean', 'median', and 'value'. Default is 'drop'.
-        - 'drop': Drops rows with any NAs.
-        - 'mean': Replaces NAs with the mean value of the column.
-        - 'median': Replaces NAs with the median value of the column.
-        - 'value': Replaces NAs with a selected value.
+    This function processes a given DataFrame to isolate numerical variables,
+    handles missing values according to the specified method, calculates the
+    correlation between each pair of numerical variables, and returns the results
+    in a new DataFrame.
 
-    Returns:
-    DataFrame: A DataFrame containing the correlation values between each pair of numerical variables.
+    Parameters
+    ----------
+    dataset : DataFrame
+        The DataFrame to be analyzed. It should include a variety of variable types.
+    na_handling : str, optional
+        Method for handling missing values (NAs). The following options are available:
+        - 'drop': Drop rows with any NAs (default).
+        - 'mean': Replace NAs with the mean value of the column.
+        - 'median': Replace NAs with the median value of the column.
+        - 'value': Replace NAs with a specified value.
 
-    Example:
-    cor_eda(data, na_handling='mean')
-            age    salary
+    Returns
+    -------
+    DataFrame
+        A DataFrame containing the correlation coefficients between each pair of
+        numerical variables.
+
+    Examples
+    --------
+    >>> cor_eda(data, na_handling='mean')
+             age    salary
     age     1.0000   0.9769
     salary  0.9769   1.0000
 
