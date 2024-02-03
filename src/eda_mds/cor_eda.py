@@ -20,7 +20,7 @@ def cor_eda(dataset, na_handling="drop"):
         - 'drop': Drop rows with any NAs (default).
         - 'mean': Replace NAs with the mean value of the column.
         - 'median': Replace NAs with the median value of the column.
-        - 'value': Replace NAs with a specified value.
+
 
     Returns
     -------
@@ -49,9 +49,6 @@ def cor_eda(dataset, na_handling="drop"):
         numerical_data = numerical_data.fillna(numerical_data.mean())
     elif na_handling == "median":
         numerical_data = numerical_data.fillna(numerical_data.median())
-    elif na_handling == "value":
-        # Replace with a chosen value, for demonstration we use 0
-        numerical_data = numerical_data.fillna(0)
     else:
         raise ValueError("na_handling must be 'drop', 'mean', 'median', or 'value'")
 
