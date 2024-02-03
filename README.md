@@ -126,8 +126,9 @@ Please note that this project is released with a Code of Conduct. By contributin
 
 ## License
 
-`eda_mds` was created by Koray Tecimer, Paolo De Lagrave-Codina, Nicole Bidwell, Simon Frew. It is licensed under the
-terms of the MIT license.
+`eda_mds` was created by Koray Tecimer, Paolo De Lagrave-Codina, Nicole Bidwell, Simon Frew. 
+Code is licensed under the terms of the MIT license. 
+Non-code portions, specifically vignettes and related documentation, is licensed under the terms of the Creative Commons Zero v1.0 Universal license.
 
 ## Credits
 
