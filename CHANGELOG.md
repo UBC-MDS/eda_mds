@@ -2,6 +2,13 @@
 
 
 
+## v2.1.8 (2024-02-03)
+
+### Fix
+
+* fix: feedback addressed by @srfrew: Ensure all scripts are pep8 linted ([`92899b9`](https://github.com/UBC-MDS/eda_mds/commit/92899b9e12ee243907a7418926f54e487102532f))
+
+
 ## v2.1.7 (2024-02-03)
 
 ### Unknown
