@@ -9,7 +9,7 @@ def cor_eda(dataset, na_handling="drop"):
     This function processes a given DataFrame to isolate numerical variables,
     handles missing values according to the specified method, calculates the
     correlation between each pair of numerical variables, and returns the results
-    in a new DataFrame.
+    in a new dataframe.
 
     Parameters
     ----------
