@@ -39,7 +39,7 @@ def cor_eda(dataset, na_handling="drop"):
     # Isolate the numerical variables
     numerical_data = dataset.select_dtypes(include=["number"])
 
-    if numerical_data.empty or numerical_data.shape[1] == 0:
+    if numerical_data.empty:
         return "no numerical columns found"
 
     # Handle missing values according to the specified method
@@ -50,7 +50,7 @@ def cor_eda(dataset, na_handling="drop"):
     elif na_handling == "median":
         numerical_data = numerical_data.fillna(numerical_data.median())
     else:
-        raise ValueError("na_handling must be 'drop', 'mean', 'median', or 'value'")
+        raise ValueError("na_handling must be 'drop', 'mean', 'median'")
 
     # Use pandas built-in corr() method to get the correlation matrix
     correlation_matrix = numerical_data.corr()
