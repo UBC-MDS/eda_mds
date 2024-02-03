@@ -19,20 +19,27 @@ df_no_numeric = pd.DataFrame({
 
 def test_threshold_value():
     """Tests that a ValueError is given when the threshold input is non-negative."""
+    
+    # call function with threshold = -2 to raise error
     with pytest.raises(ValueError):
         describe_outliers(df, threshold=-2)    
-    
+
+    # call function with threshold = -3.5 to raise error  
     with pytest.raises(ValueError):
         describe_outliers(df, threshold=-3.5)
     
 def test_df_numeric():
     """Tests that a ValueError is given when the dataframe doesn't contain any 
     numeric columns."""
+    
+    # call function with a dataframe containing no numeric columns to raise error
     with pytest.raises(ValueError):
         describe_outliers(df_no_numeric)
 
 def test_df_type():
     """Tests that a TypeError is given when the input for df is not a dataframe"""
+
+    # call function with an array and then integer to raise error
     with pytest.raises(TypeError):
         describe_outliers(np.array([1, 2, 3]))
     
@@ -41,11 +48,15 @@ def test_df_type():
 
 def test_numeric_categorical():
     """Tests that both numerical and categorical description is returned when specified"""
+    
+    # function call to return non-numeric columns  
     output_df = describe_outliers(df, numeric=False)
-    assert output_df.columns.tolist() == ['A', 'B', 'C', 'D']
+    assert output_df.columns.tolist() == ['A', 'B', 'C', 'D'] # list of columns in df 
 
 def test_output_values():
     """Tests that the calculated output values are correct."""
+
+    # obtain returned values to check correct calculation
     assert describe_outliers(df).iloc[1].iloc[1] == 6
     assert describe_outliers(df).iloc[2].iloc[1] == 0.8333333333333334
     assert describe_outliers(df).iloc[3].iloc[1] == 5.636192568273964
