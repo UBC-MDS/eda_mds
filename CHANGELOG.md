@@ -2,6 +2,17 @@
 
 
 
+## v2.1.7 (2024-02-03)
+
+### Unknown
+
+* Merge pull request #59 from UBC-MDS/fix_code_cov
+
+Fix code cov ([`0c1321b`](https://github.com/UBC-MDS/eda_mds/commit/0c1321b5eaebd9c874426a37f9ecef676248eb30))
+
+* Merge branch &#39;main&#39; into fix_code_cov ([`35601c7`](https://github.com/UBC-MDS/eda_mds/commit/35601c7d1df6eecee4cb1da6c3cbf87e1d667f8b))
+
+
 ## v2.1.6 (2024-02-03)
 
 ### Unknown
@@ -17,9 +28,13 @@ Update LICENSE to include CC0 for non-code portions ([`f43e9df`](https://github.
 
 * fix: add CC0 license for non-code portions ([`7418302`](https://github.com/UBC-MDS/eda_mds/commit/7418302d66aaf774ae1fa715534274253a04dbf5))
 
+* fix: Feedback addressed by @srfrew. Update cor_eda test coverage ([`b0b23f1`](https://github.com/UBC-MDS/eda_mds/commit/b0b23f18ee965844ed3e9815d45d8eaf69b28813))
+
 * fix: Feedback addressed by @paolocodine Include test coverage package in the pyproject.toml (785670f02260d6d9848305e1caa7fc79b1ed0cfd) (44840b799715040434fc51d6ce37fd7fb0679401) ([`5437903`](https://github.com/UBC-MDS/eda_mds/commit/543790366c2c8a762b8f0dbea65e65c4781985e7))
 
 * fix: Feedback addressed by @paolocodine cor_eda: comments from reviewer to be addressed or mentioned (bf799c0612a56db6d30e11057a1d443d5913104c) (8c86148706fb4f4f7b4623f0280dcfc3f3c4e492) (25e5b86f2296784cca0dab86516127d56ea59681) ([`54eb54e`](https://github.com/UBC-MDS/eda_mds/commit/54eb54e3c88244e8f3532efe8efec3f31c0f862a))
+
+* fix: Feedback addressed by @srfrew; add code coverage ([`87438b4`](https://github.com/UBC-MDS/eda_mds/commit/87438b4438974899338efde65795cda8e0473dc2))
 
 * fix: Feedback addressed by @paolocodine Add comments to test_cor_eda.py (28ceec57813394ab7896ea7d1032d85e84ea68e5) ([`f113546`](https://github.com/UBC-MDS/eda_mds/commit/f1135469407b655d478861cbc120f5f42be6879d))
 
@@ -48,6 +63,10 @@ fix: feedback addressed by @paolocodina ([`beca571`](https://github.com/UBC-MDS/
 * Update LICENSE language ([`973bfe5`](https://github.com/UBC-MDS/eda_mds/commit/973bfe5aac66d46e5b7253b230ddf4571fc371d7))
 
 * Update LICENSE to include CC0 for non-code portions ([`f204537`](https://github.com/UBC-MDS/eda_mds/commit/f2045370e10d5811213e9ec82fcdac2d872ea652))
+
+* Merge remote-tracking branch &#39;origin/cat_var_stats-comment&#39; into fix_code_cov ([`57dad40`](https://github.com/UBC-MDS/eda_mds/commit/57dad40a73634617e2811e2b6ec99c64b56b8fd0))
+
+* Merge branch &#39;Paolo_changes&#39; into fix_code_cov ([`756a90b`](https://github.com/UBC-MDS/eda_mds/commit/756a90b0f3de0bef6e22326547f5b53693bd2b42))
 
 * Update test_cat_var_stats.py ([`d2d98f8`](https://github.com/UBC-MDS/eda_mds/commit/d2d98f89e5dd38d28a6d949e1ce0f0bba63e63e8))
 
