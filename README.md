@@ -1,6 +1,10 @@
 # eda_mds: Simplified Exploratory Data Analysis
  
 [![Documentation Status](https://readthedocs.org/projects/eda-mds/badge/?version=latest)](https://eda-mds.readthedocs.io/en/latest/?badge=latest)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Python 3.9.0](https://img.shields.io/badge/python-3.9.0-blue.svg)](https://www.python.org/downloads/release/python-390/)
+![version](https://img.shields.io/github/v/release/UBC-MDS/eda_mds)
+![release](https://img.shields.io/github/release-date/UBC-MDS/eda_mds)
 ---
 
 Basic EDA functions implemented to improve on core Pandas DataFrame functions.
@@ -92,7 +96,7 @@ Each function takes a `pandas.DataFrame` object.
 1. Import the functions and Pandas.
 
 ```
-from eda_mds import info_na, describe_outliers, cat_var_stats, cor_eda\
+from eda_mds import info_na, describe_outliers, cat_var_stats, cor_eda
 
 import pandas as pd
 ```
