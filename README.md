@@ -66,7 +66,7 @@ Here's how to set up `eda_mds` for local development.
     $ pip install eda_mds
     ```
 
-## Running the Tests
+## Running the Tests and Coverage
 1. To run the tests navigate to the root directory
     ```console
     $ cd path/to/eda_mds
@@ -74,7 +74,11 @@ Here's how to set up `eda_mds` for local development.
 2. To run the tests navigate to the root directory
     ```console
     $ pytest
-    ``` 
+    ```
+3. To run the coverage report
+    ```console
+    $ coverage report
+    ```     
 
 ## Usage
 
