@@ -84,8 +84,30 @@ Here's how to set up `eda_mds` for local development.
 
 
 ### Function Usage
-Each function takes a `pandas.DataFrame` object. 
-Please see the included vingette for intended use. 
+
+Below provides a short depiction on how to start using the functions in this package. Please see the [vingette](https://eda-mds.readthedocs.io/en/latest/example.html) for intended use. 
+
+Each function takes a `pandas.DataFrame` object.
+
+1. Import the functions and Pandas.
+
+```
+from eda_mds import info_na, describe_outliers, cat_var_stats, cor_eda\
+
+import pandas as pd
+```
+2. Load your dataset of choice. 
+
+```
+df = pd.read_csv('https://raw.githubusercontent.com/mwaskom/seaborn-data/master/titanic.csv')
+```
+
+3. Begin using the functions! 
+
+```
+info_na(df)
+```
+
 
 ## Contributing
 Package created by Koray Tecimer, Paolo De Lagrave-Codina, Nicole Bidwell, Simon Frew.
