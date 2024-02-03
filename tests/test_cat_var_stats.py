@@ -55,7 +55,7 @@ def test_func_output():
                 'python', 'R', 'R', 'python', 'R', 'python', 'R', 'python', 'R',
                 'python', 'R', 'R', 'python', 'R', 'python', 'R', 'python', 'R',
                 'python', 'R', 'R', 'python', 'R', 'python', 'R', 'python', 'R',
-                'python', 'R', 'R', 'python', 'R', 'python', 'R', 'python', 'R',
+                'python', 'R', 'R', 'python', 'R', 'python', 'R', 'python', np.NaN,
                 'python', 'R', 'R', 'Java', 'Java']
 
     df = pd.DataFrame({'numeric_col': np.arange(0, len(cat_col), 1),
@@ -79,8 +79,11 @@ Column: cat_col_2
 Number of unique values: 3
 Frequency of values:
 python: 42.37%
-R: 54.24%
+R: 52.54%
+nan: 1.69%
 Java: 3.39%
+Binning recommendations:
+nan, Java values can be binned into "other" category as they are lower than binning threshold
 ------------------------------------
 
 
