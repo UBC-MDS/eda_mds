@@ -125,7 +125,7 @@ def test_no_numerical_columns():
 
     result = cor_eda(df)
     assert (
-        result == "There are no numerical columns"
+        result == "no numerical columns found"
     ), "The function should indicate there are no numerical columns"
 
 

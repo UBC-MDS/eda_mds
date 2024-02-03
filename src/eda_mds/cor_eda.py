@@ -40,7 +40,7 @@ def cor_eda(dataset, na_handling="drop"):
     numerical_data = dataset.select_dtypes(include=["number"])
 
     if numerical_data.empty or numerical_data.shape[1] == 0:
-        return "There are no numerical columns"
+        return "no numerical columns found"
 
     # Handle missing values according to the specified method
     if na_handling == "drop":
