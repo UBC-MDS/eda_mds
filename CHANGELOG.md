@@ -2,9 +2,20 @@
 
 
 
+## v2.1.6 (2024-02-03)
+
+### Unknown
+
+* Merge pull request #60 from UBC-MDS/add_cc_license
+
+Update LICENSE to include CC0 for non-code portions ([`f43e9df`](https://github.com/UBC-MDS/eda_mds/commit/f43e9dfdfc1f8a53825cb214655fb3aaefdd36db))
+
+
 ## v2.1.5 (2024-02-03)
 
 ### Fix
+
+* fix: add CC0 license for non-code portions ([`7418302`](https://github.com/UBC-MDS/eda_mds/commit/7418302d66aaf774ae1fa715534274253a04dbf5))
 
 * fix: Feedback addressed by @paolocodine Include test coverage package in the pyproject.toml (785670f02260d6d9848305e1caa7fc79b1ed0cfd) (44840b799715040434fc51d6ce37fd7fb0679401) ([`5437903`](https://github.com/UBC-MDS/eda_mds/commit/543790366c2c8a762b8f0dbea65e65c4781985e7))
 
@@ -31,6 +42,12 @@ fix: Feedback addressed by @nicolebid - test comments added ([`f40a6ad`](https:/
 * Merge pull request #61 from UBC-MDS/Paolo_changes
 
 fix: feedback addressed by @paolocodina ([`beca571`](https://github.com/UBC-MDS/eda_mds/commit/beca5718195c82e0b5526b61f83fb0f8579fb46e))
+
+* Update README.md for license language ([`08d714b`](https://github.com/UBC-MDS/eda_mds/commit/08d714b95f7d5f92f4930395ef9ca435af20f4d5))
+
+* Update LICENSE language ([`973bfe5`](https://github.com/UBC-MDS/eda_mds/commit/973bfe5aac66d46e5b7253b230ddf4571fc371d7))
+
+* Update LICENSE to include CC0 for non-code portions ([`f204537`](https://github.com/UBC-MDS/eda_mds/commit/f2045370e10d5811213e9ec82fcdac2d872ea652))
 
 * Update test_cat_var_stats.py ([`d2d98f8`](https://github.com/UBC-MDS/eda_mds/commit/d2d98f89e5dd38d28a6d949e1ce0f0bba63e63e8))
 
