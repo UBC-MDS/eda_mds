@@ -2,6 +2,7 @@ from eda_mds.cor_eda import cor_eda
 import pandas as pd
 import numpy as np
 
+# testing that the corr function matches the cor_eda function
 dfA = pd.DataFrame(
     data={
         "age": [25, 30, 35, 40, 45, 50, 55, 60, 65, 70],
@@ -25,6 +26,7 @@ assert np.allclose(
 ), "The correlation matrices are not approximately equal"
 
 
+# testing that the corr function matches the cor_eda function
 def test_correlation_matrix():
     """
     Verify that the computed correlation matrix matches the expected values.
@@ -51,6 +53,7 @@ def test_correlation_matrix():
     ), "The correlation matrices are not approximately equal"
 
 
+# testing that the cor_eda function works if there are None values
 def test_na_val():
     """
     Verify that df with NA's give expected values.
@@ -92,6 +95,7 @@ def test_na_val():
     ), "The function default are correctly adjusting to NA rows"
 
 
+# testing what happens if our data frame is all None
 def test_na_val_all():
     """
     Verify that df with all NA's give expected values.
@@ -112,6 +116,7 @@ def test_na_val_all():
     ), "The function indicated there are no numerical columns"
 
 
+# testing what function will do if none of the values are num
 def test_no_numerical_columns():
     """
     Verify that df has no numeric column it results in expected message.
@@ -124,6 +129,7 @@ def test_no_numerical_columns():
     ), "The function should indicate there are no numerical columns"
 
 
+# testing what function handling a wrong input value
 def test_na_handling_input():
     """
     Verify that df with na_handling with wrong input gives expected output.
@@ -138,6 +144,7 @@ def test_na_handling_input():
         ), "The function raised ValueError but with the incorrect message"
 
 
+# testing that the df did not change after function was used
 def test_df_notChanged():
     """
     Verify that df did not change after function is run.
@@ -151,6 +158,7 @@ def test_df_notChanged():
     ), "The data frame should not be changed by the function"
 
 
+# testing function handles na_handling mean correctly
 def test_na_handling_mean():
     """
     Verify that df with na_handling with mean input gives expected output.
