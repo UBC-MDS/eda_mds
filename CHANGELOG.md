@@ -2,6 +2,19 @@
 
 
 
+## v2.1.2 (2024-02-03)
+
+### Fix
+
+* fix: Feedback addressed by @nicolebid ([`a2c1de2`](https://github.com/UBC-MDS/eda_mds/commit/a2c1de2ccabcc6255b81ac236e3a52893414b844))
+
+### Unknown
+
+* Update README.md
+
+added coverage report ([`c0b86dc`](https://github.com/UBC-MDS/eda_mds/commit/c0b86dc008935680659f40c4bed784d76605465d))
+
+
 ## v2.1.1 (2024-02-03)
 
 ### Fix
