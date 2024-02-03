@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "eda_mds"
-version = "2.1.4"
+version = "2.1.5"
 description = "EBasic EDA functions implemented"
 authors = ["Koray Tecimer, Paolo De Lagrave-Codina, Nicole Bidwell, Simon Frew"]
 license = "MIT"

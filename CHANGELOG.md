@@ -2,11 +2,58 @@
 
 
 
+## v2.1.5 (2024-02-03)
+
+### Fix
+
+* fix: Feedback addressed by @paolocodine Include test coverage package in the pyproject.toml (785670f02260d6d9848305e1caa7fc79b1ed0cfd) (44840b799715040434fc51d6ce37fd7fb0679401) ([`5437903`](https://github.com/UBC-MDS/eda_mds/commit/543790366c2c8a762b8f0dbea65e65c4781985e7))
+
+* fix: Feedback addressed by @paolocodine cor_eda: comments from reviewer to be addressed or mentioned (bf799c0612a56db6d30e11057a1d443d5913104c) (8c86148706fb4f4f7b4623f0280dcfc3f3c4e492) (25e5b86f2296784cca0dab86516127d56ea59681) ([`54eb54e`](https://github.com/UBC-MDS/eda_mds/commit/54eb54e3c88244e8f3532efe8efec3f31c0f862a))
+
+* fix: Feedback addressed by @paolocodine Add comments to test_cor_eda.py (28ceec57813394ab7896ea7d1032d85e84ea68e5) ([`f113546`](https://github.com/UBC-MDS/eda_mds/commit/f1135469407b655d478861cbc120f5f42be6879d))
+
+* fix: Feedback addressed by @paolocodine  format in example part and docstring per function script consistent (PEP 8 guidelines) (4fa1225177fc665aff79a57cff351b71a2550a66) ([`51966a1`](https://github.com/UBC-MDS/eda_mds/commit/51966a1222f41b3cb7ce566bcdd546caeb6fdbad))
+
+* fix: Feedback addressed by verifying code formatting (lint) for test_cor_eda ([`97ac7f7`](https://github.com/UBC-MDS/eda_mds/commit/97ac7f7cf2d73153a01fa7101214564134adabe5))
+
+* fix: feedback addressed by @korayt koray tecimer ([`dd0295d`](https://github.com/UBC-MDS/eda_mds/commit/dd0295d929b90a5a4828d10355413b503e32ec17))
+
+### Unknown
+
+* Merge pull request #58 from UBC-MDS/cat_var_stats-comment
+
+fix: feedback addressed by @korayt koray tecimer ([`e3fcae5`](https://github.com/UBC-MDS/eda_mds/commit/e3fcae57a39b5cc0af6ed9abefe57025dbe6b24f))
+
+* Merge pull request #57 from UBC-MDS/feedback_nb
+
+fix: Feedback addressed by @nicolebid - test comments added ([`f40a6ad`](https://github.com/UBC-MDS/eda_mds/commit/f40a6add75ef7d06ca5c67305812909ed77fe369))
+
+* Merge pull request #61 from UBC-MDS/Paolo_changes
+
+fix: feedback addressed by @paolocodina ([`beca571`](https://github.com/UBC-MDS/eda_mds/commit/beca5718195c82e0b5526b61f83fb0f8579fb46e))
+
+* Update test_cat_var_stats.py ([`d2d98f8`](https://github.com/UBC-MDS/eda_mds/commit/d2d98f89e5dd38d28a6d949e1ce0f0bba63e63e8))
+
+* changing my function ([`81ff6b3`](https://github.com/UBC-MDS/eda_mds/commit/81ff6b3d08517813fb0ad437597040ad2bdd9d14))
+
+* solving issue changed my function ([`25e5b86`](https://github.com/UBC-MDS/eda_mds/commit/25e5b86f2296784cca0dab86516127d56ea59681))
+
+* issue making the warning for cor function better ([`8c86148`](https://github.com/UBC-MDS/eda_mds/commit/8c86148706fb4f4f7b4623f0280dcfc3f3c4e492))
+
+
 ## v2.1.4 (2024-02-03)
 
 ### Fix
 
 * fix: Feedback addressed by @nicolebid - readme format ([`17bf4da`](https://github.com/UBC-MDS/eda_mds/commit/17bf4da926da0f2ee753f553b8afeb45128f2d9f))
+
+* fix: Feedback addressed by @nicolebid - test comments added ([`68d7b54`](https://github.com/UBC-MDS/eda_mds/commit/68d7b54ce0bf2c6744bb5ea8eddfe46293b431d6))
+
+### Unknown
+
+* addressed issue took out value method from cor_eda ([`bf799c0`](https://github.com/UBC-MDS/eda_mds/commit/bf799c0612a56db6d30e11057a1d443d5913104c))
+
+* changed issue to add more comments to cor_eda ([`28ceec5`](https://github.com/UBC-MDS/eda_mds/commit/28ceec57813394ab7896ea7d1032d85e84ea68e5))
 
 
 ## v2.1.3 (2024-02-03)
@@ -23,6 +70,8 @@
 * fix: Feedback addressed by @nicolebid ([`a2c1de2`](https://github.com/UBC-MDS/eda_mds/commit/a2c1de2ccabcc6255b81ac236e3a52893414b844))
 
 ### Unknown
+
+* changed PEP 8 format ([`4fa1225`](https://github.com/UBC-MDS/eda_mds/commit/4fa1225177fc665aff79a57cff351b71a2550a66))
 
 * Update README.md
 
