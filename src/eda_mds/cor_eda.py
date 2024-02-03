@@ -25,7 +25,7 @@ def cor_eda(dataset, na_handling="drop"):
     Returns
     -------
     DataFrame
-        A dataframe containing the correlation coefficients between each pair of
+        A DataFrame containing the correlation coefficients between each pair of
         numerical variables.
 
     Examples
