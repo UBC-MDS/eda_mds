@@ -112,7 +112,7 @@ def test_na_val_all():
     )
     result = cor_eda(dfA)
     assert (
-        result == "There are no numerical columns"
+        result == "no numerical columns found"
     ), "The function indicated there are no numerical columns"
 
 
