@@ -32,11 +32,52 @@ EDA functions such as `pandas.Dataframe.info`, `pandas.Dataframe.describe` and `
 Our functions also depend on the `pandas.Dataframe` object.
 
 
+## Installation
+
+Here's how to set up `eda_mds` for local development.
+
+1. Clone a copy of `eda_mds` locally.
+    ```console
+    $ git clone https://github.com/UBC-MDS/eda_mds.git
+    ```
+2. Create/activate new `conda` environment and install poetry
+
+    ```console
+    $ conda create -n eda_mds_dev python=3.9 poetry
+    ```
+
+    ```console
+    $ conda activate eda_mds_dev 
+    ```
+4. Navigate to the root directory
+    ```console
+    $ cd path/to/eda_mds
+    ```
+
+3. Install `eda_mds` using `poetry`:
+
+    ```console
+    $ poetry install
+    ```
+
+- For installing the package via PyPi:
+
+    ```console
+    $ pip install eda_mds
+    ```
+
+## Running the Tests
+1. To run the tests navigate to the root directory
+    ```console
+    $ cd path/to/eda_mds
+    ```
+2. To run the tests navigate to the root directory
+    ```console
+    $ pytest
+    ``` 
+
 ## Usage
 
-### Installation
-This project has not yet been uploaded to PyPI. 
-Please see [contributing](CONTRIBUTING.md) for instructions to install locally. 
 
 ### Function Usage
 Each function takes a `pandas.DataFrame` object. 
