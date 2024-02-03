@@ -140,7 +140,7 @@ def test_na_handling_input():
         assert False, "The function should have raised a ValueError"
     except ValueError as e:
         assert (
-            str(e) == "na_handling must be 'drop', 'mean', 'median', or 'value'"
+            str(e) == "na_handling must be 'drop', 'mean', 'median'"
         ), "The function raised ValueError but with the incorrect message"
 
 
