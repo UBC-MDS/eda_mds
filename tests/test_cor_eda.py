@@ -201,4 +201,49 @@ def test_na_handling_mean():
     )
     assert np.allclose(
         cor_eda(dfB), cor_eda(dfA, na_handling="mean"), atol=1e-8
-    ), "The function default are correctly adjusting to NA rows"
+    ), "The function does not correctly impute the mean for NA values"
+
+# testing function handles na_handling median correctly
+def test_na_handling_median():
+    """
+    Verify that df with na_handling with median input gives expected output.
+    """
+    dfA = pd.DataFrame(
+        data={
+            "age": [25, None, 35, 40, 45, 55, 60, None, 70, 70],
+            "income": [
+                32000,
+                45000,
+                50000,
+                50000,
+                60000,
+                65000,
+                70000,
+                75000,
+                80000,
+                85000,
+            ],
+        }
+    )
+    age_median = pd.Series([25, 35, 40, 45, 55, 60, 70, 70]).median()
+
+    dfB = pd.DataFrame(
+        data={
+            "age": [25, age_median, 35, 40, 45, 55, 60, age_median, 70, 70],
+            "income": [
+                32000,
+                45000,
+                50000,
+                50000,
+                60000,
+                65000,
+                70000,
+                75000,
+                80000,
+                85000,
+            ],
+        }
+    )
+    assert np.allclose(
+        cor_eda(dfB), cor_eda(dfA, na_handling="median"), atol=1e-8
+    ), "The function does not correctly impute the meadian for NA values"
