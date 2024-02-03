@@ -2,6 +2,13 @@
 
 
 
+## v2.1.4 (2024-02-03)
+
+### Fix
+
+* fix: Feedback addressed by @nicolebid - readme format ([`17bf4da`](https://github.com/UBC-MDS/eda_mds/commit/17bf4da926da0f2ee753f553b8afeb45128f2d9f))
+
+
 ## v2.1.3 (2024-02-03)
 
 ### Fix
