@@ -5,6 +5,8 @@
 [![Python 3.9.0](https://img.shields.io/badge/python-3.9.0-blue.svg)](https://www.python.org/downloads/release/python-390/)
 ![version](https://img.shields.io/github/v/release/UBC-MDS/eda_mds)
 ![release](https://img.shields.io/github/release-date/UBC-MDS/eda_mds)
+[![codecov](https://codecov.io/gh/UBC-MDS/eda_mds/graph/badge.svg?token=gYWEHF3qa3)](https://codecov.io/gh/UBC-MDS/eda_mds)
+
 ---
 
 Basic EDA functions implemented to improve on core Pandas DataFrame functions.
